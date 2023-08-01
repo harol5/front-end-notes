@@ -1,0 +1,16 @@
+THIS:
+"this" key = works will point 
+differently depending how it's called and where it was created.
+
+
+Closure is a feature that keeps reference to outter variables, even if the function is no longer on the execution stack.
+close in all the variables it's supposed to have access to.
+
+the prototype is just a reference to another object that have other properties.
+every function has a property call "prototype" that starts as a empty object,
+but if the "new" operator is use to invoke the function. it will be initiated.
+
+the __proto__ is the prototype property of the function, but
+the "prototype" is the property is inizialize when the function is use as
+a construtor function to set the __proto__ of the objects created
+with the construtor function.

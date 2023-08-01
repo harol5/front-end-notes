@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+h1 {
+  font-family: "Comfortaa";
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto 900px auto;
+  grid-gap: 1rem;
+  /* justify-items: center;
+  align-items: center; */
+}
+
+header {
+  grid-column: 1/4;
+  text-align: center;
+}
+body {
+  background-color: black;
+}
+main {
+  grid-column: 2/3;
+}
+footer {
+  grid-column: 1/4;
+  text-align: center;
+}
+
+/*--------------------flex box--------------------------*/
+.flexing-container {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  flex-wrap: wrap;
+  /*---------------------------*/
+  /*main axis*/
+  justify-content: space-evenly;
+  /*cross axis*/
+  align-items: flex-end;
+  /*multiple cross axis*/
+  align-content: flex-start;
+  /*---------------------------*/
+}
+.card {
+  background-color: aqua;
+  max-width: 40%;
+  /* flex-grow: 1; */
+  /* flex-shrink: 1; */
+  /* flex-basis: 1; */
+  /* flex: 1 1 1; */
+  /* align-self: auto; */
+  cursor: pointer;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.card:hover {
+  opacity: 0.6;
+}
+
+/*----------------------------grid-----------------------------*/
+.grid-container-main {
+  display: grid;
+  gap: 1rem;
+  /* grid-template-columns: repeat(4, 1fr); */
+  /* grid-template-rows: repeat(2, 1fr); */
+  grid-template-areas:
+    "one two five"
+    "four four five"
+    "three three three";
+}
+.card-grid {
+  max-width: 100%;
+  cursor: pointer;
+}
+.card-grid img {
+  max-width: 100%;
+}
+
+.card-grid-1 {
+  background: blue;
+  grid-area: one;
+  /* grid-column: span 2; */
+}
+.card-grid-2 {
+  background: palegreen;
+  grid-area: two;
+}
+.card-grid-3 {
+  background: lightsalmon;
+  grid-area: three;
+}
+.card-grid-4 {
+  background: lightgoldenrodyellow;
+  grid-area: four;
+  /* grid-column: span 2; */
+}
+.card-grid-5 {
+  background: lightblue;
+  grid-area: five;
+  /* grid-column: 4; */
+  /* grid-row-start: 1; */
+  /* grid-row-end: span 2; */
+}
+
+/*----animations-----*/
+#about {
+  grid-column: 2/3;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 10em 0;
+  /*---------Property--Duration------Timing function-----------delay---*/
+  transition: transform 2s cubic-bezier(0.93, -0.05, 0.66, 1.64) 3s; /*define transition on main style*/
+  /* transform: rotate(90deg); */
+  /* transform: scale(1.2); */
+  /* transform: translate(-50%); */
+  /* transform: skew(45deg); */
+}
+
+#about:hover {
+  /* transform: rotate(180deg) translate(0, -400px); */
+  animation: down-flip-back 2s cubic-bezier(0.93, -0.05, 0.66, 1.64) 1s infinite
+    alternate; /*--define animation where it occurs--*/
+}
+
+@keyframes down-flip-back {
+  100% {
+    transform: rotate(180deg) translate(0, -400px);
+  }
+}

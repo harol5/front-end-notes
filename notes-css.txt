@@ -1,0 +1,2 @@
+1. how many inches in a reference css pixel?                          1px = 1/96 inch
+2. which unit of measurements should you use the most?                 relative units: em, rem, %, ch, viewports.

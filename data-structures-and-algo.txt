@@ -1,0 +1,38 @@
+Big O: (Order of magnitude of complexity)
+a notation use to describe complexity of an algorithm (worst case escenario).
+ 
+O(1) = constant time : size of n wont matter. (index)
+O(log n) = Binary search.
+O(n) = linear : will grow as n gets larger. (loop)
+O(n log n) = quasilinear : for every value of n, log n will be 
+     perform. (sorting, merge sort).
+Polynomial runtime:
+     O(n^c) : c = exponent.
+     O(n^2) = cuadratic runtime. (a loop within a loop).
+     O(n^3) = cubic runtime. (a loop within a loop within a loop).
+Exponential runtime:
+     O(c^n) = think of guessing a password.
+     O(69^8) = a password with 8 digits; 69 possible possible 
+     anwers per digit.
+Factorial runtime:
+     O(n!) = Traveling Salesman Problem.
+     O(4!) = 4 x 3 x 2 x 1 = 24 : number of combination per city.       
+       
+      
+Data Structures: a way to store data that is related and allows performing 
+     operations to it. each data structure solve a particular problem.
+
+     OPERATIONS: all data structures should be able to provide the following
+     operation: Access, Reading, Search, Insert and Delete.
+
+     ARRAYS: collection of values and use a building-block to construct more 
+     complex data structures, it's store continuosly, this allow quick access
+     to the data store in it. good at accessing, bad at insering and deleting
+
+     Linked List: a linear data structure where each item is store in a separ
+     -ate object call "node", this node stores the item and a reference to the 
+     next node (pointer). the first node is called the "head" and the last node
+     is called "tail", there are 2 types: singly linked list and doubly linked
+     list. the last one keeping reference to the previous and next node.
+
+
