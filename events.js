@@ -20,9 +20,11 @@ div.appendChild(div2);
 div2.appendChild(h1);
 div2.appendChild(p);
 
+//bubbleling by default.
 div.addEventListener("click", (e) => {
   console.log("div");
 });
+//To capture pass "true" as 3rd argument.
 div.addEventListener(
   "click",
   (e) => {
