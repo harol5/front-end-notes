@@ -13,4 +13,4 @@ but if the "new" operator is use to invoke the function. it will be initiated.
 the __proto__ is the prototype property of the function, but
 the "prototype" is the property is inizialize when the function is use as
 a construtor function to set the __proto__ of the objects created
-with the construtor function.
+with the constructor function.

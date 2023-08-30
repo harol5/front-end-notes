@@ -19,14 +19,14 @@ obj.lastName = "rojas";
 obj.age = 28;
 obj.isFemale = false;
 
-// refObj will have the refernece to the same object the obj variable is pointing.
+// "refObj" will have the reference to the same object the "obj" variable is pointing.
 let refObj = obj;
 refObj.name = "name changed from a differenc variable";
 console.log(refObj);
 console.log(obj);
 // to copy an object and modify it without changing the original object, use the following code.
 let copyOfObj = { ...obj };
-copyOfObj.name = "copy of obejct using spread operator";
+copyOfObj.name = "copy of object using spread operator";
 console.log(copyOfObj);
 console.log(obj);
 
@@ -53,8 +53,8 @@ for (let prop of Object.entries(obj)) {
 //----------------------------------------Objects----------------------------------------//
 
 function Person(name, lastName, age, sex) {
-  //this is a constructor function, it is used to create object, the "this" -
-  //will point at the empty objet that the "new" keyword will create.
+  //this is a constructor function, it is used to create objects, the "this" -
+  //will point at the empty object that the "new" keyword will create.
   this.name = name;
   this.lastName = lastName;
   this.age = age;
@@ -72,7 +72,7 @@ console.log(juan);
 console.log(obj);
 
 //the Object.create() constructor is use to create new objects, it takes an object as -
-//as an argument which will be use as the prototype of the object.
+//an argument which will be use as the prototype of the object.
 let juanSon = Object.create(juan);
 juanSon.sonNum = 1;
 juanSon.name = "harol";
@@ -110,7 +110,7 @@ class Human {
   }
 }
 
-//to increase the prototype chain, use the "extends" keyword, "Latino" class will inherete -
+//to increase the prototype chain, use the "extends" keyword. "Latino" class will inherete -
 //all the fields and methods from the "Human" class.
 class Latino extends Human {
   country;
