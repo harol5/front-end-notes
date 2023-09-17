@@ -3,31 +3,44 @@
   margin: 0px;
 }
 
-h1 {
-  font-family: "Comfortaa";
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto 900px auto;
-  grid-gap: 1rem;
-  /* justify-items: center;
-  align-items: center; */
-}
-
-header {
-  grid-column: 1/4;
-  text-align: center;
+h1,
+h2 {
+  font-family: "Comfortaa", cursive;
 }
 body {
-  background-color: black;
+  background-color: rgb(223, 255, 253);
+  display: grid;
+  grid-template-columns: auto 900px auto;
+  /* grid-gap: 1rem; */
+  /* justify-items: center; */
+  /* align-items: center; */
+}
+header {
+  grid-column: 1/4;
+  border: 1px solid black;
+  text-align: center;
+}
+li {
+  display: inline;
 }
 main {
   grid-column: 2/3;
+  border: 1px solid rgb(255, 149, 149);
+  display: flex;
+  flex-wrap: wrap;
 }
 footer {
   grid-column: 1/4;
+  border: 1px solid rgb(233, 145, 255);
   text-align: center;
+}
+
+.section-img-background {
+  background-image: url(https://picsum.photos/seed/picsum/500/300?grayscale);
+  background-position: center;
+  background-size: cover;
+  padding: 9em 1em;
+  color: rgb(0, 0, 0);
 }
 
 /*--------------------flex box--------------------------*/
@@ -137,3 +150,10 @@ footer {
     transform: rotate(180deg) translate(0, -400px);
   }
 }
+
+/* @media (max-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+} */
