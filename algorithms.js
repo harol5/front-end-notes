@@ -65,6 +65,46 @@ function memoFibb(n) {
   console.log(fibb(n));
 }
 
+// Merge sort algorithm
+function mergeSort(arr) {
+  if (arr.length <= 1) return;
+
+  let mid = Math.floor(arr.length / 2);
+  let leftArr = arr.slice(0, mid);
+  let rightArr = arr.slice(mid);
+  mergeSort(leftArr);
+  mergeSort(rightArr);
+  merge(leftArr, rightArr, arr);
+}
+// helper function for Merge sort.
+function merge(leftArr, rightArr, arr) {
+  let l = 0;
+  let r = 0;
+  let i = 0;
+
+  while (l < leftArr.length && r < rightArr.length) {
+    if (leftArr[l] < rightArr[r]) {
+      arr[i] = leftArr[l];
+      l++;
+      i++;
+    } else {
+      arr[i] = rightArr[r];
+      r++;
+      i++;
+    }
+  }
+  while (r < rightArr.length) {
+    arr[i] = rightArr[r];
+    r++;
+    i++;
+  }
+  while (l < leftArr.length) {
+    arr[i] = leftArr[l];
+    l++;
+    i++;
+  }
+}
+
 let duplicateItems = [2, 3, 1, 5, 6, 8, 34, 62, 2];
 let unorderedList = [1, 2, 3, 5, 65, 16];
 let orderedList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
