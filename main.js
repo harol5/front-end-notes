@@ -86,63 +86,63 @@ what(() => console.log("dos..."));
 
 what(() => console.log("tres..."));
 
-// //Promises
+//Promises
 
-// const stock = {
-//   fruits: ["strawberry", "grapes", "banana", "apples"],
-//   liquid: ["water", "milk", "ice"],
-//   holder: ["cone", "cup", "stick"],
-//   toppings: ["chocolate", "peanuts"],
-// };
+const stock = {
+  fruits: ["strawberry", "grapes", "banana", "apples"],
+  liquid: ["water", "milk", "ice"],
+  holder: ["cone", "cup", "stick"],
+  toppings: ["chocolate", "peanuts"],
+};
 
-// const isShopOpen = true;
+const isShopOpen = true;
 
-// const order = (time, work) => {
-//   return new Promise((resolve, reject) => {
-//     if (isShopOpen) {
-//       setTimeout(() => {
-//         resolve(work());
-//       }, time);
-//     } else {
-//       reject(console.log("our shop is closed"));
-//     }
-//   });
-// };
+const order = (time, work) => {
+  return new Promise((resolve, reject) => {
+    if (isShopOpen) {
+      setTimeout(() => {
+        resolve(work());
+      }, time);
+    } else {
+      reject(console.log("our shop is closed"));
+    }
+  });
+};
 
-// order(2000, () => console.log(`${stock.fruits[0]} was selected`))
-//   .then(() => {
-//     return order(0000, () => {
-//       console.log("production has started");
-//     });
-//   })
+order(2000, () => console.log(`${stock.fruits[0]} was selected`))
+  .then(() => {
+    return order(0000, () => {
+      console.log("production has started");
+    });
+  })
 
-//   .then(() => {
-//     return order(3000, () => {
-//       console.log("the fruit was chopped");
-//     });
-//   })
+  .then(() => {
+    return order(3000, () => {
+      console.log("the fruit was chopped");
+    });
+  })
 
-//   .then(() => {
-//     return order(3000, () => {
-//       console.log(
-//         `${stock.liquid[0]}, ${stock.liquid[1]} and ${stock.liquid[2]} were mixed`
-//       );
-//     });
-//   })
+  .then(() => {
+    return order(3000, () => {
+      console.log(
+        `${stock.liquid[0]}, ${stock.liquid[1]} and ${stock.liquid[2]} were mixed`
+      );
+    });
+  })
 
-//   .then(() => {
-//     return order(3000, () => {
-//       console.log(`ice cream was served on a ${stock.holder[0]}`);
-//     });
-//   })
+  .then(() => {
+    return order(3000, () => {
+      console.log(`ice cream was served on a ${stock.holder[0]}`);
+    });
+  })
 
-//   .catch(() => {
-//     console.log("customer left");
-//   })
+  .catch(() => {
+    console.log("customer left");
+  })
 
-//   .finally(() => {
-//     console.log("day is over, shop is closed");
-//   });
+  .finally(() => {
+    console.log("day is over, shop is closed");
+  });
 
 // // Callback hell.
 
