@@ -19,3 +19,4 @@
 
 - git config --global user.name "your name" (adds identity to each commit).
 - git config --global user.email you@example.com (adds identity to each commit).
+- git config --global alias.'shotcut' "command" (creates shortcuts).
