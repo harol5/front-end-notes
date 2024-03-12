@@ -18,7 +18,7 @@ body {
 }
 header {
   grid-column: 1/4;
-  border: 1px solid rgb(204, 0, 255);
+  border: 1px solid rgb(0, 12, 88);
   text-align: center;
 }
 main {
@@ -29,7 +29,7 @@ main {
 }
 footer {
   grid-column: 1/4;
-  border: 1px solid rgb(233, 145, 255);
+  border: 1px solid rgb(108, 46, 254);
   text-align: center;
 }
 
@@ -164,3 +164,9 @@ li {
     flex-direction: column;
   }
 } */
+
+@media (max-width: 200px) {
+  main {
+    flex-direction: column;
+  }
+}
