@@ -1,5 +1,7 @@
 # Git basic commands
 
+## Version History
+
 - git init (initialize git).
 - git status (shows latest updates).
 
@@ -20,3 +22,9 @@
 - git config --global user.name "your name" (adds identity to each commit).
 - git config --global user.email you@example.com (adds identity to each commit).
 - git config --global alias.'shotcut' "command" (creates shortcuts).
+
+- rm -rf .git (deletes repo).
+
+## Remote Repo
+
+- git remote 'repor name' 'url'
