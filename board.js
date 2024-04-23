@@ -13,5 +13,5 @@ console.log(add(a, b));
 
 const sub = (a, b) => a - b;
 console.log(sub(10, 5));
-console.log("more troubleshooting bug");
-console.log("more troubleshooting bug");
+
+console.log("feature 1 completed");
