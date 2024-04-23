@@ -27,4 +27,4 @@
 
 ## Remote Repo
 
-- git remote 'repor name' 'url'
+- git remote add 'repor name' 'url'
