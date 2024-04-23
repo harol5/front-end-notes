@@ -13,3 +13,5 @@ console.log(add(a, b));
 
 const sub = (a, b) => a - b;
 console.log(sub(10, 5));
+
+console.log("bug added");
