@@ -1,0 +1,21 @@
+JXS: syntax that react uses to create a react element, which it's just an object that represents an html element. 
+     React.createElement();
+
+
+
+
+
+
+Hooks: a crucial part of react, a series of functions that allow us to update the state of our component.
+
+ - useRef: give direct access to DOM Element (like querySelector).
+ - useState: helps manage the state of the app.
+ - useMemo: helps manage state that needs to be remenber, where updates will be only trigger by their dependency's state.
+ - useReducer: helps manages complex state (objects).
+ - createContext: creates a <component>context with shared state between multiple components.
+ - useContext: gets the shared data from the context.
+ - useCallBack: manage references to objects.
+ - useEffect: manage the execution of code that needs to be call after rendering (Promise).
+
+
+

@@ -47,3 +47,23 @@ function identity<Type>(arg: Type): Type {
   return arg;
 }
 let myIdentity: GenericIdentityFn = identity;
+
+type Humano = { color: string; religion: string };
+type Animal = { numOflegs: string; color: string };
+type humOrAn = Animal | Humano;
+interface myFunc {
+  <t>(data: t): t;
+}
+type myFunc2 = <t, t2, t3>(data: t, other: t2, rest: t3) => [t, t2, t3];
+
+let repeat: myFunc = (date) => {
+  if (typeof date === "string") console.log("is a string");
+  if (typeof date === "function") date();
+  return date;
+};
+
+console.log(repeat("hello"));
+console.log(typeof repeat("hello"));
+
+console.log(repeat(() => console.log("Im a call back func")));
+console.log(typeof repeat(() => console.log("Im a call back func")));

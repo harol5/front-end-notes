@@ -170,3 +170,7 @@ li {
     flex-direction: column;
   }
 }
+
+.postsWrapper div {
+  margin: 1%;
+}
